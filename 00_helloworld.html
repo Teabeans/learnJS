@@ -164,6 +164,41 @@
 	// 1:02:00
 	// If there is a naming conflict, the local variable takes precedence over the global variable
 
-	// 1:02:41 - Function returns
+	// 1:02:41 - Function returns and assignments
+	// Already demonstrated
+
+	// 1:06:00 - Queues
+	// Gotta implement it using push and shifting. No queue datatype provided
+	var myQ = [1, 2, 3];
+
+	// Adding an element to the queue at the back (right)
+	function enqueue( Q, newArrival ) {
+		Q.push( newArrival );
+		return Q;
+	}
+
+	enqueue( myQ, 4 );
+
+	function printArray( array ) {
+		concatenator = "[ ";
+		for( i = 0 ; i < array.length ; i++ ) {
+			concatenator += array[i] + " ";
+		}
+		concatenator += "]";
+		console.log( concatenator );
+	}
+
+	printArray( myQ );
+
+	function dequeue( Q ) {
+		return Q.shift( Q );
+	}
+
+	dequeue( myQ );
+
+	printArray( myQ );
+
+	// But why bother? Arrays have shift and push (Q and DeQ) natively; that's a queue
+
 
 </script>
