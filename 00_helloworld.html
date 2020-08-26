@@ -145,4 +145,25 @@
 	// 48:35 - Shift - Same as pop(), but from the front ([0])
 	// 49:27 - Unshift - Same as push(), but from the front ([0])
 
+	// 50:00 - 55:40 - Functions
+
+	// 55:44 - Scope
+	var globalVariable = 3.141569;
+
+	function myFunction2( arg1 ) {
+        // Do things
+        console.log( typeof globalVariable );
+        oopsThisIsGlobal = 5; // Because 'var' was not included in declaration; this is now global
+		return "something";
+	}
+
+	console.log( typeof oopsThisIsGlobal ); // oopsGlobal is undefined here
+	myFunction2( 1 );
+	console.log( typeof oopsThisIsGlobal ); // But not undefined here
+
+	// 1:02:00
+	// If there is a naming conflict, the local variable takes precedence over the global variable
+
+	// 1:02:41 - Function returns
+
 </script>
