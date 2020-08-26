@@ -1,4 +1,7 @@
 <script> // Denotes that the contents hereafter are Javascript
+	// https://www.youtube.com/watch?v=PkZNo7MFNFg
+	// freecodecamp.org
+
     // This is a line comment
     /*
     This is a block/multi-line comment
@@ -96,5 +99,30 @@
 	console.log( "QuirkOne is: " + quirkOne );
 	console.log( "QuirkTwo is: " + quirkTwo );
 
+	// 31:15
+	// Length of string
+	console.log( fString.length ); // Length field of String object
+	// Character access by index
+	console.log( fString[0] ); // 'T'
+
+	// String immutability - Cannot be altered once created
+	var gString = "Jello, World!";
+	// gString[0] = "H"; // Can't do this
+	// Have to overwrite the whole string
+	gString = "Hello, World!";
+
+	// To get the last letter, subtract from .length
+	var lastLetter = gString[ gString.length - 1 ];
+	console.log( lastLetter ); // 'T'
+
+	// Functions	
+	// 37:15
+	function myFunction( arg1 ) {
+        // Do things
+        console.log( "Argument received: " + arg1 );
+		return "something";
+	}
+
+	console.log( myFunction( 1 ) );
 
 </script>
