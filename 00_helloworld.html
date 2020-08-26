@@ -125,4 +125,20 @@
 
 	console.log( myFunction( 1 ) );
 
+	// 40:48 - Arrays - Not strongly typed, can be mixed media
+	var ourArray = [ "aString", 123, 2.1 ];
+	// Can also be another array - Nested arrays, jagged arrays
+	// Access using 0-based indexing
+
+	var jaggedArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+	console.log( jaggedArray[3][0][2]); // 12 expected
+
+	// 46:38 - Array push()
+	jaggedArray.push( [97, 98, 99] );
+	console.log( jaggedArray[4][2] ); // 99 expected
+
+	var removed = jaggedArray.pop();
+	console.log( jaggedArray ); // [97, 98, 99] removed
+	console.log( removed[0] ); // 97 expected
+
 </script>
