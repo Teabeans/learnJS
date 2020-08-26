@@ -200,5 +200,67 @@
 
 	// But why bother? Arrays have shift and push (Q and DeQ) natively; that's a queue
 
+	// 1:09:00 - Booleans
+	// 1:09:40 - If statements
+	if( true ) {
+		// execute this
+	}
+	else if( true ) {
+		// then try to execute this next
+	}
+	else if( true ) {
+		// Arbitrary number of tests
+	}
+	else {
+		// Catchall - If nothing matches, do this
+	}
+
+	// 1:13:00 - Strict equality operator - No type coercion
+	console.log( 3 === 3 );
+	// 1:15:43 - Inequality operator
+	console.log( 3 != "3" ); // YES to type coercion
+	// 1:16:40 - Strict inequality operator
+	console.log( 3 !== "3" ); // NO to type coercion
+	// 1:17:00 - Greater than, lesser than comparisons
+	// >=, <=
+	// 1:20:00 - Logical AND, OR
+	console.log( true && true )
+	console.log( true || false )
+
+	// Switch
+	var caseStudy = 2;
+	switch( caseStudy ) {
+		case 1:
+			// Do Case 1 things
+		case 2:
+			// Do Case 2 things
+			console.log( "Hit!" );
+			caseStudy = 3;
+		case 3:
+			console.log( "Twofer!" ); // Does not stop evaluating just because a match is found
+			break; // Prevent further evaluation using a break
+		case "someString":
+			// Can also match to full strings, not just numbers
+		default:
+			// And a default behavior
+	}
+
+	// 1:42:00 - Math functions
+	console.log( Math.sqrt(64) ); // 64^-2
+	console.log( Math.pow( 2, 16 ) ); // 2^16
+	console.log( 2^16 );
+	console.log( Math.round(3.1415) ); // Coerce to the nearest int
+
+	// 1:49:00 - Objects
+	var myDog = {
+		"name" : "Rover",
+		"legs" : 4,
+		"friends" : [ "All the things!" ]
+	};
+
+	console.log( myDog.name ); // Dot notation
+	console.log( myDog["name"] ); // Bracket notation
+	console.log( myDog['name'] ); // Bracket notation with single quotes
+	console.log( myDog[`name`] ); // with backticks
 
 </script>
