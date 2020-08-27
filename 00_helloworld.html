@@ -289,6 +289,72 @@
 	console.log( myDog.hasOwnProperty( "bark" ) );
 
 	// 1:59:15 - Complex Objects
-	
+	// Can store objects in other objects
+	var outerObject = {
+		"key" : "value",
+		"innerObject" : {
+			"innerKey" : "innerValue"
+		}
+	};
+	console.log( outerObject.innerObject.innerKey );
+
+	// Backing up / deep copy of objects
+	var objectOriginal = {
+		"key" : "value"
+	};
+	var objectCopy = objectOriginal; // Sends a reference to the new object (shallow copy)
+	objectCopy.key = "FooBarBaz"; // Changing this changes BOTH the original and the 'copy'
+
+	console.log( objectOriginal.key );
+	console.log( objectCopy.key );
+
+    objectOriginal.key = "value";
+
+	// To deep copy:
+	objectCopy = JSON.parse( JSON.stringify( objectOriginal) );
+	objectCopy.key = "FooBarBaz"; // Changing this changes only the 'copy'
+
+	console.log( objectOriginal.key );
+	console.log( objectCopy.key );	
+
+	// 2:04:00 - Record collection update. Given ID#, a key, and a value, update the object appropriately
+	var musicCollection = {
+		"1111": {
+			"album" : "Distant Worlds",
+			"artist" : "Nobuo Uematsu",
+			"tracks" : {
+				"1" : "Opening / Bombing Mission",
+				"2" : "Liberi Fatali",
+				"3" : "Aerith's Theme",
+				"4" : "Fisherman's Horizon",
+				"5" : "Don't Be Afraid",
+				"6" : "Memoro De La Stona",
+				"7" : "Medley 2002",
+				"8" : "Theme of Love",
+				"9" : "Vamo Alla Flamenco",
+				"10": "Love Grows",
+				 // : "Opera - Maria and Draco",
+				"12": "Swing de Chocobo",
+				"13": "One-Winged Angel"
+			}
+		}
+	}
+
+    function updateAlbum( archive, id, property, value ) {
+        // If empty, this signals a deletion of that property
+    	if( value === "" ) {
+    		delete archive[id][property];
+    	}
+    	else{
+    		// Clear the old property
+    		delete archive[id][property];
+    		// Write the new property
+    		archive[id][property] = value;
+    	}
+    }
+
+    var newTrack = {"11" : "Opera - Maria and Draco"};
+	updateAlbum( musicCollection, "1111", "tracks", newTrack );
+    console.log( musicCollection["1111"]["tracks"]["11"] );
 
 </script>
