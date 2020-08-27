@@ -527,4 +527,10 @@ I am ${user.age} years old!`;
 
 	console.log( greeting );
 
+	// 3:10:45 - Object literal declarations with simple fields
+	const profileConstructor = ( name, age, gender ) => ( { name, age, gender } ); // Create a lambda function
+	let profile1 = profileConstructor( "Jane", 23, "NaG" ); // Use the lambda function to create an object
+	console.log( profile1 ); // Check the object state
+
+
 </script>
