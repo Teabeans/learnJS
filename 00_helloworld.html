@@ -485,5 +485,14 @@
 	let arrayCopy = arrayOriginal; // Shallow copy, reference to the original array
 	let arrayCopy2 = [...arrayOriginal]; // Deep copy, elements moved one by one
 
+	// 2:57:00 - Destructuring assignment
+	var voxel = {x: 1, y: 2, z: 3}; // Voxel object with an x,y,z coordinate
+
+	// Destructuing maps existing variables to new ones
+	let { x : foo , y : bar , z : baz } = voxel; // Let x map to food, y map to bar, z map to baz from 'voxel'
+	console.log( foo );
+	console.log( bar );
+	console.log( baz );
+
 
 </script>
