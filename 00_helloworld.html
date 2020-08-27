@@ -262,5 +262,33 @@
 	console.log( myDog["name"] ); // Bracket notation
 	console.log( myDog['name'] ); // Bracket notation with single quotes
 	console.log( myDog[`name`] ); // with backticks
+	myDog.friends.push("JaneDoe");
+	printArray( myDog.friends );
+
+	// Adding a property
+	myDog["bark"] = "Woof!";
+	console.log( myDog.bark );
+
+	// Deleting a property
+	delete myDog.bark;
+	console.log( myDog.bark ); // undefined expected
+
+	// Objects are a key:value storage
+
+	// 1:56:00 - Using objects for lookups
+	var dictionary = {
+		"a" : "aardvark",
+		"b" : "bjork",
+		"key" : "value"
+	};
+	var lookupResult = dictionary["key"];
+	console.log( lookupResult );
+
+	// 1:57:45 - Testing objects for properties
+	console.log( myDog.hasOwnProperty( "name" ) );
+	console.log( myDog.hasOwnProperty( "bark" ) );
+
+	// 1:59:15 - Complex Objects
+	
 
 </script>
