@@ -417,4 +417,26 @@
     // 2:32:32 - Number coercion from string
     console.log( parseInt( "123" ) );
 
+    // 2:33:12 - Number coercion from binary
+    console.log( parseInt( "100001010101", 2 ) ); // Base-2 radix (binary number)
+
+    // Ternary operators
+    // condition ? if-true : if false;
+    // Can nest ternary operators
+
+    // Let and const (versus var)
+    // Let prevents us from declaring the variable twice
+
+    // 2:38:59 - Strict mode - requires that variables be declared with var, let, or const
+	"use strict";
+    function strictFunction( ) {
+    	myName = "JaneDoe";
+    }
+    strictFunction();
+
+    // Generally, use 'let' all the time unless there's a specific reason not to
+
+    // 2:41:00 - Const - Like 'let', but cannot be reassigned.
+    const PI = 3.141569;
+
 </script>
