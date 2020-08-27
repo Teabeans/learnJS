@@ -377,8 +377,30 @@
 
     // 2:17:00 - Iterating based on array.length
 
+    function sumOfDigits( arg1 ) {
+        var sum = 0;
+        var argAsString = "" + arg1;
+    	for( var i = 0 ; i < argAsString.length ; i++ ) {
+    		sum += +argAsString[i]; // Use '+' to coerce to a number
+    	}
+    	return sum;
+    }
 
+    console.log( sumOfDigits( 12345 ) );
 
+    function productOfDigits( arg1 ) {
+        var argAsString = "" + arg1;
+        var prod = Number(argAsString[0]);
+    	for( var i = 1 ; i < argAsString.length ; i++ ) {
+    		prod *= +argAsString[i];
+    	}
+    	return prod;
+    }
 
+    console.log( productOfDigits( 12345 ) );
+
+    // Can use nested for loops to iterate over nested, jagged arrays
+
+    
 
 </script>
