@@ -512,7 +512,19 @@
 	let [ , , ...shortSource ] = source; // Omits the first two elements (empty elements), assigns the remainder
 	console.log( [ ...shortSource ] );
 
-	// 3:05:00 - Using 
+	// 3:05:00 - Using destructuring assignment to pass object as function parameter
+	function destructuringFunc( { field1, field2 } ) { // The argument passed will be destructured, looking for elements 'field1' and 'field2'
+		console.log( field1 ); // Handled inside the function without the use of dot notation to dereference
+		console.log( field2 ); // Dereference is performed by the {} in the function arguments
+	}
 
+	// Used in API calls to request or transfer just what information is needed from an object (better performance on the network)
+
+	// 3:06:00 - Template literals
+	let user = { name : "FooBarBaz", age : "23" }; // Use backticks for template literals.
+	let greeting = `Hello, my name is ${user.name}!
+I am ${user.age} years old!`;
+
+	console.log( greeting );
 
 </script>
