@@ -532,5 +532,71 @@ I am ${user.age} years old!`;
 	let profile1 = profileConstructor( "Jane", 23, "NaG" ); // Use the lambda function to create an object
 	console.log( profile1 ); // Check the object state
 
+	// 3:12:30 - Declarative Functions
+	// Objects can contain functions
+	let bicycle = {
+		gears: 21,
+		// Function as a field of an object
+		setGear: function( newGear ) {
+			this.gear = newGear;
+		},
+		getGear( ) { // Also a function of an object
+			return this.gear;
+		}
+	};
+
+	bicycle.setGear(14);
+	console.log( bicycle.getGear() )
+
+	// 3:13:00 - Class syntax to define a constructor function
+	class Cat {
+		constructor( name ) {
+			this.name = name;
+		}
+	}
+
+	let myCat = new Cat( "ChairmanMeow" );
+	console.log( myCat.name );
+
+	// 3:15:00 - Getters/setters
+
+	class Book {
+		constructor( author ) {
+			this._author = author; // _author denotes a private variable
+		}
+		get author() { // Get is a keyword
+			return this._author;
+		}
+		set author( newAuthor ) { // Set is also a keyword
+			this._author = newAuthor;
+		}
+	}
+
+	// Getters and setters allow dot notation access to otherwise private fields
+	let myBook = new Book( "Melville" );
+	myBook.author = "Moby";
+	console.log( myBook.author );
+
+	// 3:20:00 - Import/Export/Require
+	// Imports are used to bring in code from another file
+	// Must define a specific export in the exporting file
+/* - Located in exportTest.js
+	export function exportFunction( a, b ) {
+		return a + b;
+	}
+*/
+/* - Does not work on local file systems using the browser for execution
+- Results in Cross Origins Request error
+	import { exportFunction } from "./exportTest.js";
+	let importResult = exportFunction( 10, 20 );
+	console.log( importResult );
+*/
+
+	// 3:24:00 - Import using * to grab everything
+	// import * as someObjectNameForStorage from "./theTargetFilePath";
+
+	// 3:25:00 - Default export
+	// 3:25:30 - Import default export
+	// import theObjectName from "./theTargetFilePath"; // No brace around the object name when importing a default export
 
 </script>
